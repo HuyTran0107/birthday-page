@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #FFDEE9, #B5FFFC);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #FF1493;
+    margin: 0;
+}
+
+p {
+    font-size: 1.5rem;
+    color: #4B0082;
+}
+
+button {
+    background-color: #FF1493;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: #FF69B4;
+}
+
+.balloons {
+    position: relative;
+    margin-top: 50px;
+}
+
+.balloon {
+    width: 50px;
+    height: 70px;
+    background-color: #FF69B4;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -200px;
+    animation: float 6s ease-in-out infinite;
+}
+
+.balloon::before {
+    content: '';
+    position: absolute;
+    top: 65px;
+    left: 23px;
+    width: 4px;
+    height: 60px;
+    background-color: #aaa;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-500px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.one {
+    left: 10%;
+    background-color: #FF4500;
+    animation-delay: 0s;
+}
+
+.two {
+    left: 30%;
+    background-color: #FFD700;
+    animation-delay: 1s;
+}
+
+.three {
+    left: 50%;
+    background-color: #32CD32;
+    animation-delay: 2s;
+}
+
+.four {
+    left: 70%;
+    background-color: #00BFFF;
+    animation-delay: 3s;
+}
+
+.five {
+    left: 90%;
+    background-color: #FF69B4;
+    animation-delay: 4s;
+}
